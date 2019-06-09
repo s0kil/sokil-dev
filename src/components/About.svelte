@@ -27,4 +27,4 @@
   I exist to build and improve omni-channel businesses that care about their
   customer experience.
 </p>
-<a href="mailto:daniel@sokil.dev">daniel@sokil.dev</a>
+<a href="mailto:contact@dominate.biz">contact@dominate.biz</a>
