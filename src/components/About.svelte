@@ -7,6 +7,7 @@
   p {
     font-family: "Nobile", sans-serif;
     font-size: 2rem;
+    max-width: 40rem;
   }
 
   a {

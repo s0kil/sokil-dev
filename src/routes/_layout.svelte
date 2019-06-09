@@ -18,10 +18,15 @@
     min-width: 100vw;
     min-height: 100vh;
     background: #eeddcc;
-    background-size: 90%;
-    background-position: -20% 20%;
     background-repeat: no-repeat;
     background-image: url("/images/background.min.png");
+  }
+
+  @media (max-width: 800px) {
+    main {
+      background-size: 90%;
+      background-position: -20% 20%;
+    }
   }
 </style>
 
