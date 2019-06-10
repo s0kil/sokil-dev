@@ -1,12 +1,11 @@
 {
-  "name": "TODO",
-  "description": "TODO",
-  "version": "0.0.1",
+  "name": "sokil-dev",
   "scripts": {
     "dev": "PORT=8000 sapper dev",
     "build": "sapper build --legacy",
-    "export": "sapper export --legacy",
-    "start": "PORT=8000 node __sapper__/build"
+    "export": "sapper export --legacy && npm run subfont",
+    "start": "PORT=8000 node __sapper__/build",
+    "subfont": "subfont __sapper__/export/index.html -i"
   },
   "dependencies": {
     "polka": "^0.5.0",
@@ -28,6 +27,7 @@
     "rollup-plugin-svelte": "^5.0.1",
     "rollup-plugin-terser": "^4.0.4",
     "sapper": "^0.27.3",
+    "subfont": "^3.6.3",
     "svelte": "^3.5.1"
   },
   "optionalDependencies": {
