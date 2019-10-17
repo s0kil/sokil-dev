@@ -27,16 +27,6 @@
   a:hover {
     color: #5e5245;
   }
-
-  ul {
-    margin: 0;
-  }
-
-  @media (max-width: 600px) {
-    ul {
-      padding: 0;
-    }
-  }
 </style>
 
 <div>

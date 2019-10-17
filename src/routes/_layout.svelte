@@ -14,6 +14,12 @@
     }
   }
 
+  @media (max-width: 600px) {
+    :global(ul) {
+      padding: 0;
+    }
+  }
+
   main {
     min-width: 100vw;
     min-height: 100vh;
