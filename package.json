@@ -2,9 +2,8 @@
   "name": "sokil-dev",
   "scripts": {
     "dev": "PORT=8000 sapper dev",
-    "build": "sapper build",
+    "start": "nimhttpd -p:8000 __sapper__/export",
     "export": "sapper export && npm run subfont",
-    "start": "PORT=8000 node __sapper__/build",
     "subfont": "subfont __sapper__/export/index.html -i"
   },
   "dependencies": {
@@ -28,7 +27,7 @@
     "rollup-plugin-terser": "^4.0.4",
     "sapper": "^0.27.9",
     "subfont": "^3.7.0",
-    "svelte": "^3.12.1"
+    "svelte": "^3.13.0-alpha.0"
   },
   "optionalDependencies": {
     "iltorb": "^2.4.0",
