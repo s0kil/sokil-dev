@@ -18,7 +18,7 @@
     "@babel/preset-env": "^7.7.1",
     "@babel/runtime": "^7.7.2",
     "npm-run-all": "^4.1.5",
-    "rollup": "^1.26.5",
+    "rollup": "^1.27.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
@@ -27,7 +27,7 @@
     "rollup-plugin-terser": "^5.1.2",
     "sapper": "^0.27.9",
     "subfont": "^4.0.3",
-    "svelte": "^3.14.0"
+    "svelte": "^3.14.1"
   },
   "optionalDependencies": {
     "iltorb": "^2.4.4",

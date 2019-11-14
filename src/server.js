@@ -1,14 +1,23 @@
-import sirv from "sirv";
-import polka from "polka";
-import compression from "shrink-ray-current";
 import * as sapper from "@sapper/server";
+
+import compression from "shrink-ray-current";
+import polka from "polka";
+import sirv from "sirv";
 
 const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === "development";
 
 polka()
   .use(
-    compression({ threshold: 0 }),
+    compression({
+      filter: () => true,
+      zlib: {
+        level: 9
+      },
+      brotli: {
+        quality: 11
+      }
+    }),
     sirv("static", { dev }),
     sapper.middleware()
   )
