@@ -14,19 +14,12 @@
     color: #b89239;
     text-decoration: none;
   }
-
-  /*
-  img {
-    max-height: 100px;
-    border-radius: 50%;
-  }
-  */
 </style>
 
 <!-- <img src="images/daniel-sokil.png" alt="Daniel Sokil's Face" /> -->
 <h4>Hello, I'm Daniel Sokil</h4>
 <p>
-  I exist to build and improve omni-channel businesses that care about their
-  customer experience.
+  Building and improving omni-channel businesses that care about their customer
+  experience.
 </p>
-<a href="mailto:contact@dominate.biz">contact@dominate.biz</a>
+<a href="mailto:dtechtours@gmail.com">dtechtours@gmail.com</a>

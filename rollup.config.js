@@ -2,7 +2,7 @@ import babel from "rollup-plugin-babel";
 import commonjs from "rollup-plugin-commonjs";
 import config from "sapper/config/rollup.js";
 import pkg from "./package.json";
-import replace from "rollup-plugin-replace";
+import replace from "@rollup/plugin-replace";
 import resolve from "rollup-plugin-node-resolve";
 import svelte from "rollup-plugin-svelte";
 import { terser } from "rollup-plugin-terser";
@@ -22,6 +22,7 @@ export default {
     output: config.client.output(),
     plugins: [
       replace({
+        // @ts-ignore
         "process.browser": true,
         "process.env.NODE_ENV": JSON.stringify(mode)
       }),
@@ -61,7 +62,25 @@ export default {
 
       !dev &&
         terser({
-          module: true
+          module: true,
+          compress: {
+            passes: 3,
+            warnings: true,
+            arguments: true,
+            booleans_as_integers: true,
+
+            unsafe: true,
+            unsafe_math: true,
+            unsafe_comps: true,
+            unsafe_arrows: true,
+            unsafe_regexp: true,
+            unsafe_methods: true,
+            unsafe_Function: true,
+            unsafe_undefined: true
+          },
+          mangle: {
+            eval: true
+          }
         })
     ],
 
@@ -73,6 +92,7 @@ export default {
     output: config.server.output(),
     plugins: [
       replace({
+        // @ts-ignore
         "process.browser": false,
         "process.env.NODE_ENV": JSON.stringify(mode)
       }),
@@ -85,6 +105,7 @@ export default {
     ],
     external: Object.keys(pkg.dependencies).concat(
       require("module").builtinModules ||
+        // @ts-ignore
         Object.keys(process.binding("natives"))
     ),
 
@@ -97,6 +118,7 @@ export default {
     plugins: [
       resolve(),
       replace({
+        // @ts-ignore
         "process.browser": true,
         "process.env.NODE_ENV": JSON.stringify(mode)
       }),

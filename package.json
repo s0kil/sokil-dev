@@ -2,32 +2,32 @@
   "name": "sokil-dev",
   "scripts": {
     "dev": "PORT=8000 sapper dev",
-    "start": "nimhttpd -p:8000 __sapper__/export",
-    "export": "sapper export && npm run subfont",
+    "start": "PORT=8000 pnpx serve __sapper__/export",
+    "export": "sapper export",
     "subfont": "subfont __sapper__/export/index.html -i"
   },
   "dependencies": {
-    "polka": "^0.5.2",
+    "polka": "next",
     "shrink-ray-current": "^4.1.2",
-    "sirv": "^0.4.2"
+    "sirv": "next"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@babel/plugin-transform-runtime": "^7.6.2",
-    "@babel/preset-env": "^7.7.1",
-    "@babel/runtime": "^7.7.2",
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/runtime": "^7.7.4",
+    "@rollup/plugin-replace": "^2.2.1",
     "npm-run-all": "^4.1.5",
-    "rollup": "^1.27.0",
+    "rollup": "^1.27.8",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-svelte": "^5.1.1",
     "rollup-plugin-terser": "^5.1.2",
     "sapper": "^0.27.9",
-    "subfont": "^4.0.3",
-    "svelte": "^3.14.1"
+    "subfont": "^4.0.4",
+    "svelte": "^3.16.0"
   },
   "optionalDependencies": {
     "iltorb": "^2.4.4",
