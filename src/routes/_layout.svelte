@@ -1,3 +1,7 @@
+<script>
+  import "modern-normalize/modern-normalize.css"
+</script>
+
 <style>
   :global(html, body) {
     width: 100%;
@@ -23,9 +27,7 @@
   main {
     min-width: 100vw;
     min-height: 100vh;
-    background: #eeddcc;
-    background-repeat: no-repeat;
-    background-image: url("/images/background.min.png");
+    background: #eeddcc url("/images/background.min.png") no-repeat;
   }
 
   @media (max-width: 800px) {

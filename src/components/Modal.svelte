@@ -1,11 +1,12 @@
 <script>
-  import { slide } from "svelte/transition";
-  import { quintInOut } from "svelte/easing";
+  import {slide} from "svelte/transition";
+  import {quintInOut} from "svelte/easing";
 
   export let route;
 
   function handleKeydown(event) {
-    if (event.keyCode === 27) closeModal();
+    if (event.key === "Escape") closeModal();
+    else if (event.keyCode === 27) closeModal();
   }
 
   function closeModal() {
@@ -36,6 +37,7 @@
     margin-left: auto;
     user-select: none;
   }
+
   span:hover {
     cursor: pointer;
     color: #bb0a1e;
@@ -46,21 +48,19 @@
   }
 </style>
 
-<svelte:window on:keydown={handleKeydown} />
+<svelte:window on:keydown={handleKeydown}/>
 
 <svelte:head>
-  <link
-    href="https://fonts.googleapis.com/css?family=Allerta|Nobile&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Allerta|Nobile&display=swap" rel="stylesheet"/>
 </svelte:head>
 
 <section transition:slide={{ duration: 500, easing: quintInOut }}>
   <nav>
-    <slot name="header" />
+    <slot name="header"/>
     <span on:click={closeModal}>X</span>
   </nav>
 
   <div>
-    <slot />
+    <slot/>
   </div>
 </section>

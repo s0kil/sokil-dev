@@ -35,8 +35,8 @@
       European Specialty Foods
       <span>2015 - Today</span>
       <p>
-        Responsible for bringing our in-store experience in the digitial world.
-        Currently focused on implementing an efficient inventory system that
+        Responsible for bringing our in-store experience in the digital world.
+        Focused on implementing an efficient inventory system that
         would decrease warehouse-to-customer turn around time.
         <br />
         <a target="_blank" href="https://europeanmarketus.com">

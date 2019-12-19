@@ -65,21 +65,15 @@
 
 <nav>
   <button
-    on:click={() => {
-      route = 'portfolio';
-    }}>
+    on:click={() => route = 'portfolio'}>
     portfolio
   </button>
   <button
-    on:click={() => {
-      route = 'skills';
-    }}>
+    on:click={() => route = 'skills'}>
     skills
   </button>
   <button
-    on:click={() => {
-      route = 'about';
-    }}>
+    on:click={() => route = 'about'}>
     about
   </button>
 </nav>

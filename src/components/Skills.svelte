@@ -21,9 +21,11 @@
     </p>
   </li>
 
-  <li>Web Development</li>
-  <p>
-    Focused on building web applications that deliver a fast, reliable, and
-    resilient user experience.
-  </p>
+  <li>
+    Web Development
+    <p>
+      Focused on building web applications that deliver a fast, reliable, and
+      resilient user experience.
+    </p>
+  </li>
 </ul>
