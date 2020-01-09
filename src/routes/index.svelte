@@ -64,18 +64,9 @@
 </h1>
 
 <nav>
-  <button
-    on:click={() => route = 'portfolio'}>
-    portfolio
-  </button>
-  <button
-    on:click={() => route = 'skills'}>
-    skills
-  </button>
-  <button
-    on:click={() => route = 'about'}>
-    about
-  </button>
+  <button on:click={() => (route = 'portfolio')}>portfolio</button>
+  <button on:click={() => (route = 'skills')}>skills</button>
+  <button on:click={() => (route = 'about')}>about</button>
 </nav>
 
 {#if route === 'portfolio'}

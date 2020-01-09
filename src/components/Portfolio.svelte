@@ -36,8 +36,8 @@
       <span>2015 - Today</span>
       <p>
         Responsible for bringing our in-store experience in the digital world.
-        Focused on implementing an efficient inventory system that
-        would decrease warehouse-to-customer turn around time.
+        Focused on implementing an efficient inventory system that would
+        decrease warehouse-to-customer turn around time.
         <br />
         <a target="_blank" href="https://europeanmarketus.com">
           European Market (WIP)

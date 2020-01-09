@@ -1,5 +1,5 @@
 <script>
-  import "modern-normalize/modern-normalize.css"
+  import "modern-normalize/modern-normalize.css";
 </script>
 
 <style>

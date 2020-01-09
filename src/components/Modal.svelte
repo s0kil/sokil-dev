@@ -1,6 +1,6 @@
 <script>
-  import {slide} from "svelte/transition";
-  import {quintInOut} from "svelte/easing";
+  import { slide } from "svelte/transition";
+  import { quintInOut } from "svelte/easing";
 
   export let route;
 
@@ -48,19 +48,21 @@
   }
 </style>
 
-<svelte:window on:keydown={handleKeydown}/>
+<svelte:window on:keydown={handleKeydown} />
 
 <svelte:head>
-  <link href="https://fonts.googleapis.com/css?family=Allerta|Nobile&display=swap" rel="stylesheet"/>
+  <link
+    href="https://fonts.googleapis.com/css?family=Allerta|Nobile&display=swap"
+    rel="stylesheet" />
 </svelte:head>
 
 <section transition:slide={{ duration: 500, easing: quintInOut }}>
   <nav>
-    <slot name="header"/>
-    <span on:click={closeModal}>X</span>
+    <slot name="header" />
+    <span on:click={closeModal} title="Close (ESC)">X</span>
   </nav>
 
   <div>
-    <slot/>
+    <slot />
   </div>
 </section>
