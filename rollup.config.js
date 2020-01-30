@@ -13,7 +13,7 @@ const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
 const onwarn = (warning, onwarn) =>
   (warning.code === "CIRCULAR_DEPENDENCY" &&
-    warning.message.includes("/@sapper/")) ||
+    /[/\\]@sapper[/\\]/.test(warning.message)) ||
   onwarn(warning);
 
 export default {
@@ -22,7 +22,6 @@ export default {
     output: config.client.output(),
     plugins: [
       replace({
-        // @ts-ignore
         "process.browser": true,
         "process.env.NODE_ENV": JSON.stringify(mode)
       }),
@@ -32,7 +31,8 @@ export default {
         emitCss: true
       }),
       resolve({
-        browser: true
+        browser: true,
+        dedupe: ["svelte"]
       }),
       commonjs(),
 
@@ -62,25 +62,7 @@ export default {
 
       !dev &&
         terser({
-          module: true,
-          compress: {
-            passes: 3,
-            warnings: true,
-            arguments: true,
-            booleans_as_integers: true,
-
-            unsafe: true,
-            unsafe_math: true,
-            unsafe_comps: true,
-            unsafe_arrows: true,
-            unsafe_regexp: true,
-            unsafe_methods: true,
-            unsafe_Function: true,
-            unsafe_undefined: true
-          },
-          mangle: {
-            eval: true
-          }
+          module: true
         })
     ],
 
@@ -92,7 +74,6 @@ export default {
     output: config.server.output(),
     plugins: [
       replace({
-        // @ts-ignore
         "process.browser": false,
         "process.env.NODE_ENV": JSON.stringify(mode)
       }),
@@ -100,12 +81,13 @@ export default {
         generate: "ssr",
         dev
       }),
-      resolve(),
+      resolve({
+        dedupe: ["svelte"]
+      }),
       commonjs()
     ],
     external: Object.keys(pkg.dependencies).concat(
       require("module").builtinModules ||
-        // @ts-ignore
         Object.keys(process.binding("natives"))
     ),
 
@@ -118,7 +100,6 @@ export default {
     plugins: [
       resolve(),
       replace({
-        // @ts-ignore
         "process.browser": true,
         "process.env.NODE_ENV": JSON.stringify(mode)
       }),
