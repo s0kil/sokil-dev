@@ -1,23 +1,15 @@
 import * as sapper from "@sapper/server";
 
-import compression from "shrink-ray-current";
+import compression from "compression";
 import polka from "polka";
 import sirv from "sirv";
 
 const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === "development";
 
-polka()
+polka() // You can also use Express
   .use(
-    compression({
-      filter: () => true,
-      zlib: {
-        level: 9
-      },
-      brotli: {
-        quality: 11
-      }
-    }),
+    compression({ threshold: 0 }),
     sirv("static", { dev }),
     sapper.middleware()
   )
