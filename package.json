@@ -1,5 +1,6 @@
 {
   "name": "sokil-dev",
+  "license": "MIT",
   "scripts": {
     "dev": "PORT=8000 sapper dev",
     "prod": "npm run export && npm run subFont",
