@@ -1,5 +1,5 @@
 import commonjs from "@rollup/plugin-commonjs";
-import config from "sapper/config/rollup.js";
+import config from "@s0kil/sapper/config/rollup.js";
 import esbuild from "rollup-plugin-esbuild";
 import pkg from "./package.json";
 import replace from "@rollup/plugin-replace";
