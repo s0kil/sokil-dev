@@ -1,15 +1,18 @@
+import path from "path";
 import commonjs from "@rollup/plugin-commonjs";
-import config from "@s0kil/sapper/config/rollup.js";
+import config from "sapper/config/rollup.js";
 import esbuild from "rollup-plugin-esbuild";
 import pkg from "./package.json";
 import replace from "@rollup/plugin-replace";
 import resolve from "@rollup/plugin-node-resolve";
 import svelte from "rollup-plugin-svelte";
+import url from "@rollup/plugin-url";
 
 const mode = process.env.NODE_ENV;
 const dev = mode === "development";
 
 const onwarn = (warning, onwarn) =>
+  (warning.code === "MISSING_EXPORT" && /'preload'/.test(warning.message)) ||
   (warning.code === "CIRCULAR_DEPENDENCY" &&
     /[/\\]@sapper[/\\]/.test(warning.message)) ||
   onwarn(warning);
@@ -30,9 +33,14 @@ export default {
         "process.env.NODE_ENV": JSON.stringify(mode),
       }),
       svelte({
-        dev,
-        hydratable: true,
-        emitCss: true,
+        compilerOptions: {
+          dev,
+          hydratable: true,
+        },
+      }),
+      url({
+        sourceDir: path.resolve(__dirname, "src/node_modules/images"),
+        publicPath: "/client/",
       }),
       resolve({
         browser: true,
@@ -56,8 +64,17 @@ export default {
         "process.env.NODE_ENV": JSON.stringify(mode),
       }),
       svelte({
-        generate: "ssr",
-        dev,
+        compilerOptions: {
+          dev,
+          generate: "ssr",
+          hydratable: true,
+        },
+        emitCss: false,
+      }),
+      url({
+        sourceDir: path.resolve(__dirname, "src/node_modules/images"),
+        publicPath: "/client/",
+        emitFiles: false, // already emitted by client build
       }),
       resolve({
         dedupe: ["svelte"],
@@ -65,8 +82,7 @@ export default {
       commonjs(),
     ],
     external: Object.keys(pkg.dependencies).concat(
-      require("module").builtinModules ||
-        Object.keys(process.binding("natives"))
+      require("module").builtinModules
     ),
 
     preserveEntrySignatures: "strict",

@@ -2,6 +2,10 @@
   import "modern-normalize/modern-normalize.css";
 </script>
 
+<main>
+  <slot />
+</main>
+
 <style>
   :global(html, body) {
     width: 100%;
@@ -37,7 +41,3 @@
     }
   }
 </style>
-
-<main>
-  <slot />
-</main>

@@ -8,6 +8,34 @@
   let route;
 </script>
 
+<h1>
+  Sokil's
+  <span>Proficiencies</span>
+</h1>
+
+<nav>
+  <button on:click={() => (route = "portfolio")}>portfolio</button>
+  <button on:click={() => (route = "skills")}>skills</button>
+  <button on:click={() => (route = "about")}>about</button>
+</nav>
+
+{#if route === "portfolio"}
+  <Modal bind:route>
+    <h2 slot="header">Portfolio</h2>
+    <Portfolio />
+  </Modal>
+{:else if route === "skills"}
+  <Modal bind:route>
+    <h2 slot="header">Skills</h2>
+    <Skills />
+  </Modal>
+{:else if route === "about"}
+  <Modal bind:route>
+    <h2 slot="header">About</h2>
+    <About />
+  </Modal>
+{/if}
+
 <style>
   h1,
   h2,
@@ -57,31 +85,3 @@
     margin-left: 0.2rem;
   }
 </style>
-
-<h1>
-  Sokil's
-  <span>Proficiencies</span>
-</h1>
-
-<nav>
-  <button on:click={() => (route = 'portfolio')}>portfolio</button>
-  <button on:click={() => (route = 'skills')}>skills</button>
-  <button on:click={() => (route = 'about')}>about</button>
-</nav>
-
-{#if route === 'portfolio'}
-  <Modal bind:route>
-    <h2 slot="header">Portfolio</h2>
-    <Portfolio />
-  </Modal>
-{:else if route === 'skills'}
-  <Modal bind:route>
-    <h2 slot="header">Skills</h2>
-    <Skills />
-  </Modal>
-{:else if route === 'about'}
-  <Modal bind:route>
-    <h2 slot="header">About</h2>
-    <About />
-  </Modal>
-{/if}

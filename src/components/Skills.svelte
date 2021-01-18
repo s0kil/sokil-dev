@@ -1,16 +1,3 @@
-<style>
-  li {
-    font-family: "Allerta", sans-serif;
-    font-size: 1.2rem;
-  }
-
-  p {
-    font-family: "Nobile", sans-serif;
-    font-size: 1rem;
-    max-width: 40rem;
-  }
-</style>
-
 <ul>
   <li>
     Data Cleansing
@@ -29,3 +16,16 @@
     </p>
   </li>
 </ul>
+
+<style>
+  li {
+    font-family: "Allerta", sans-serif;
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-family: "Nobile", sans-serif;
+    font-size: 1rem;
+    max-width: 40rem;
+  }
+</style>

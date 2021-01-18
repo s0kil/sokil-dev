@@ -1,34 +1,3 @@
-<style>
-  li {
-    font-family: "Allerta", sans-serif;
-    font-size: 1.2rem;
-  }
-
-  p,
-  span {
-    font-family: "Nobile", sans-serif;
-  }
-
-  p {
-    font-size: 1rem;
-    line-height: 1.4rem;
-    max-width: 40rem;
-  }
-
-  span {
-    font-size: 0.8rem;
-  }
-
-  a {
-    color: #b89239;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #5e5245;
-  }
-</style>
-
 <div>
   <ul>
     <li>
@@ -59,3 +28,34 @@
     </li>
   </ul>
 </div>
+
+<style>
+  li {
+    font-family: "Allerta", sans-serif;
+    font-size: 1.2rem;
+  }
+
+  p,
+  span {
+    font-family: "Nobile", sans-serif;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    max-width: 40rem;
+  }
+
+  span {
+    font-size: 0.8rem;
+  }
+
+  a {
+    color: #b89239;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #5e5245;
+  }
+</style>

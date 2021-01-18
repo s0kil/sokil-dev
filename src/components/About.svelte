@@ -1,3 +1,10 @@
+<h4>Hello, I'm Daniel Sokil</h4>
+<p>
+  Building and improving omni-channel businesses that care about their customer
+  experience.
+</p>
+<a href="mailto:dtechtours@gmail.com">dtechtours@gmail.com</a>
+
 <style>
   h4 {
     font-family: "Allerta", sans-serif;
@@ -15,11 +22,3 @@
     text-decoration: none;
   }
 </style>
-
-<!-- <img src="images/daniel-sokil.png" alt="Daniel Sokil's Face" /> -->
-<h4>Hello, I'm Daniel Sokil</h4>
-<p>
-  Building and improving omni-channel businesses that care about their customer
-  experience.
-</p>
-<a href="mailto:dtechtours@gmail.com">dtechtours@gmail.com</a>

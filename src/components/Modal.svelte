@@ -14,6 +14,26 @@
   }
 </script>
 
+<svelte:window on:keydown={handleKeydown} />
+
+<svelte:head>
+  <link
+    href="https://fonts.googleapis.com/css?family=Allerta|Nobile&display=swap"
+    rel="stylesheet"
+  />
+</svelte:head>
+
+<section transition:slide={{ duration: 500, easing: quintInOut }}>
+  <nav>
+    <slot name="header" />
+    <span on:click={closeModal} title="Close (ESC)">X</span>
+  </nav>
+
+  <div>
+    <slot />
+  </div>
+</section>
+
 <style>
   section {
     position: absolute;
@@ -47,22 +67,3 @@
     padding: 1rem 2rem;
   }
 </style>
-
-<svelte:window on:keydown={handleKeydown} />
-
-<svelte:head>
-  <link
-    href="https://fonts.googleapis.com/css?family=Allerta|Nobile&display=swap"
-    rel="stylesheet" />
-</svelte:head>
-
-<section transition:slide={{ duration: 500, easing: quintInOut }}>
-  <nav>
-    <slot name="header" />
-    <span on:click={closeModal} title="Close (ESC)">X</span>
-  </nav>
-
-  <div>
-    <slot />
-  </div>
-</section>
