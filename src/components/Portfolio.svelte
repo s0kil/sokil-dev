@@ -8,8 +8,8 @@
         Focused on implementing an efficient inventory system that would
         decrease warehouse-to-customer turn around time.
         <br />
-        <a target="_blank" href="https://europeanmarketus.com">
-          European Market (WIP)
+        <a target="_blank" href="https://europeanmarketus.com/">
+          European Market
         </a>
       </p>
     </li>
@@ -23,7 +23,7 @@
         <br />
         <a target="_blank" href="https://granitedepot.biz/">Granite Depot</a>
         <br />
-        <a target="_blank" href="https://mindaligned.us">Mind Aligned</a>
+        <a target="_blank" href="https://mindaligned.us/">Mind Aligned</a>
       </p>
     </li>
   </ul>
@@ -51,11 +51,13 @@
   }
 
   a {
-    color: #b89239;
+    color: #5e5245;
+    font-size: 1rem;
     text-decoration: none;
   }
 
   a:hover {
-    color: #5e5245;
+    color: #b89239;
+    outline: 1px solid #5e5245;
   }
 </style>

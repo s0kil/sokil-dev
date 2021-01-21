@@ -4,11 +4,11 @@
   experience.
 </p>
 
-<a href="https://www.linkedin.com/in/daniel-sokil/">LinkedIn</a>
+<a target="_blank" href="https://www.linkedin.com/in/daniel-sokil/">LinkedIn</a>
 <br />
-<a href="https://github.com/s0kil/">GitHub</a>
+<a target="_blank" href="https://github.com/s0kil/">GitHub</a>
 <br />
-<a href="mailto:dtechtours@gmail.com">Email</a>
+<a target="_blank" href="mailto:dtechtours@gmail.com">Email</a>
 
 <style>
   h4 {
