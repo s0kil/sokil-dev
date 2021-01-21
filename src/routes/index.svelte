@@ -14,9 +14,9 @@
 </h1>
 
 <nav>
-  <button on:click={() => (route = "portfolio")}>portfolio</button>
-  <button on:click={() => (route = "skills")}>skills</button>
-  <button on:click={() => (route = "about")}>about</button>
+  <button on:click={() => (route = "portfolio")}>Portfolio</button>
+  <button on:click={() => (route = "skills")}>Skills</button>
+  <button on:click={() => (route = "about")}>About</button>
 </nav>
 
 {#if route === "portfolio"}

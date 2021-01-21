@@ -3,7 +3,12 @@
   Building and improving omni-channel businesses that care about their customer
   experience.
 </p>
-<a href="mailto:dtechtours@gmail.com">dtechtours@gmail.com</a>
+
+<a href="https://www.linkedin.com/in/daniel-sokil/">LinkedIn</a>
+<br />
+<a href="https://github.com/s0kil/">GitHub</a>
+<br />
+<a href="mailto:dtechtours@gmail.com">Email</a>
 
 <style>
   h4 {
@@ -18,7 +23,9 @@
   }
 
   a {
-    color: #b89239;
+    font-size: 1.2rem;
+    display: block;
+    color: #5e5245;
     text-decoration: none;
   }
 </style>
