@@ -18,14 +18,14 @@
     "@rollup/plugin-node-resolve": "^11.1.0",
     "@rollup/plugin-replace": "^2.3.4",
     "@rollup/plugin-url": "^6.0.0",
-    "esbuild": "^0.8.33",
+    "esbuild": "^0.8.36",
     "modern-normalize": "^1.0.0",
     "npm-run-all": "^4.1.5",
-    "rollup": "^2.37.1",
+    "rollup": "^2.38.0",
     "rollup-plugin-esbuild": "^2.6.1",
     "rollup-plugin-svelte": "^7.1.0",
-    "sapper": "^0.28.10",
-    "subfont": "^5.2.5",
-    "svelte": "^3.31.2"
+    "sapper": "^0.29.0",
+    "subfont": "^5.3.0",
+    "svelte": "^3.32.0"
   }
 }
