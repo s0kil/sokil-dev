@@ -26,6 +26,6 @@
     "rollup-plugin-svelte": "^7.1.0",
     "sapper": "^0.29.1",
     "subfont": "^6.1.0",
-    "svelte": "^3.38.2"
+    "svelte": "^3.49.0"
   }
 }
